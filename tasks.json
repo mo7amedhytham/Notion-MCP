@@ -1,0 +1,641 @@
+[
+  {
+    "task": "Define scope and MVP features per service",
+    "phase": "0 - Planning",
+    "skills": [
+      "Planning"
+    ],
+    "days": 1,
+    "dependsOn": [],
+    "priority": "High",
+    "start": "2026-10-12",
+    "deadline": "2026-10-12",
+    "owner": "Me"
+  },
+  {
+    "task": "Draw architecture diagram and service boundaries",
+    "phase": "0 - Planning",
+    "skills": [
+      "System Design"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Define scope and MVP features per service"
+    ],
+    "priority": "High",
+    "start": "2026-10-13",
+    "deadline": "2026-10-14",
+    "owner": "Me"
+  },
+  {
+    "task": "Choose database per service",
+    "phase": "0 - Planning",
+    "skills": [
+      "Databases"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Draw architecture diagram and service boundaries"
+    ],
+    "priority": "High",
+    "start": "2026-10-15",
+    "deadline": "2026-10-15",
+    "owner": "Me"
+  },
+  {
+    "task": "Write API contracts (OpenAPI) for all services",
+    "phase": "0 - Planning",
+    "skills": [
+      "API Design"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Draw architecture diagram and service boundaries"
+    ],
+    "priority": "High",
+    "start": "2026-10-16",
+    "deadline": "2026-10-19",
+    "owner": "Me"
+  },
+  {
+    "task": "Setup monorepo and Git conventions",
+    "phase": "0 - Planning",
+    "skills": [
+      "Git"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Draw architecture diagram and service boundaries"
+    ],
+    "priority": "Medium",
+    "start": "2026-10-20",
+    "deadline": "2026-10-20",
+    "owner": "Me"
+  },
+  {
+    "task": "Create Dockerfile template (Node multi-stage)",
+    "phase": "1 - Docker Foundation",
+    "skills": [
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Setup monorepo and Git conventions"
+    ],
+    "priority": "High",
+    "start": "2026-10-21",
+    "deadline": "2026-10-21",
+    "owner": "Me"
+  },
+  {
+    "task": "Create base docker-compose (networks volumes env)",
+    "phase": "1 - Docker Foundation",
+    "skills": [
+      "Docker Compose"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Create Dockerfile template (Node multi-stage)"
+    ],
+    "priority": "High",
+    "start": "2026-10-22",
+    "deadline": "2026-10-22",
+    "owner": "Me"
+  },
+  {
+    "task": "Build shared libs (logger error handler validation)",
+    "phase": "1 - Docker Foundation",
+    "skills": [
+      "Node.js",
+      "Express"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Setup monorepo and Git conventions"
+    ],
+    "priority": "Medium",
+    "start": "2026-10-23",
+    "deadline": "2026-10-26",
+    "owner": "Me"
+  },
+  {
+    "task": "User Service: registration and login (JWT)",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Express",
+      "Auth",
+      "PostgreSQL"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Choose database per service",
+      "Create base docker-compose (networks volumes env)",
+      "Build shared libs (logger error handler validation)"
+    ],
+    "priority": "High",
+    "start": "2026-10-27",
+    "deadline": "2026-10-29",
+    "owner": "Me"
+  },
+  {
+    "task": "User Service: profile management and roles",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "User Service: registration and login (JWT)"
+    ],
+    "priority": "Medium",
+    "start": "2026-10-30",
+    "deadline": "2026-11-02",
+    "owner": "Me"
+  },
+  {
+    "task": "User Service: tests and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Testing",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "User Service: profile management and roles"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-03",
+    "deadline": "2026-11-03",
+    "owner": "Me"
+  },
+  {
+    "task": "Product Catalog: products and categories CRUD",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Choose database per service",
+      "Create base docker-compose (networks volumes env)",
+      "Build shared libs (logger error handler validation)"
+    ],
+    "priority": "High",
+    "start": "2026-11-04",
+    "deadline": "2026-11-06",
+    "owner": "Me"
+  },
+  {
+    "task": "Product Catalog: inventory and search/filter/pagination",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "MongoDB"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Product Catalog: products and categories CRUD"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-09",
+    "deadline": "2026-11-11",
+    "owner": "Me"
+  },
+  {
+    "task": "Product Catalog: tests and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Testing",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Product Catalog: inventory and search/filter/pagination"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-12",
+    "deadline": "2026-11-12",
+    "owner": "Me"
+  },
+  {
+    "task": "Shopping Cart: add/remove/update items",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Express",
+      "Redis"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "User Service: tests and Dockerize",
+      "Product Catalog: tests and Dockerize"
+    ],
+    "priority": "High",
+    "start": "2026-11-13",
+    "deadline": "2026-11-17",
+    "owner": "Me"
+  },
+  {
+    "task": "Shopping Cart: tests and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Testing",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Shopping Cart: add/remove/update items"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-18",
+    "deadline": "2026-11-18",
+    "owner": "Me"
+  },
+  {
+    "task": "Order Service: place order and order items",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Shopping Cart: tests and Dockerize"
+    ],
+    "priority": "High",
+    "start": "2026-11-19",
+    "deadline": "2026-11-23",
+    "owner": "Me"
+  },
+  {
+    "task": "Order Service: status tracking and history",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Order Service: place order and order items"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-24",
+    "deadline": "2026-11-25",
+    "owner": "Me"
+  },
+  {
+    "task": "Order Service: tests and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Testing",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Order Service: status tracking and history"
+    ],
+    "priority": "Medium",
+    "start": "2026-11-26",
+    "deadline": "2026-11-26",
+    "owner": "Me"
+  },
+  {
+    "task": "Payment Service: Stripe integration (test mode)",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Stripe API"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Order Service: tests and Dockerize"
+    ],
+    "priority": "High",
+    "start": "2026-11-27",
+    "deadline": "2026-12-01",
+    "owner": "Me"
+  },
+  {
+    "task": "Payment Service: webhooks and idempotency",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Stripe API"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Payment Service: Stripe integration (test mode)"
+    ],
+    "priority": "High",
+    "start": "2026-12-02",
+    "deadline": "2026-12-03",
+    "owner": "Me"
+  },
+  {
+    "task": "Payment Service: tests and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Testing",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Payment Service: webhooks and idempotency"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-04",
+    "deadline": "2026-12-04",
+    "owner": "Me"
+  },
+  {
+    "task": "Notification Service: email via SendGrid",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "SendGrid"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Create base docker-compose (networks volumes env)"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-07",
+    "deadline": "2026-12-08",
+    "owner": "Me"
+  },
+  {
+    "task": "Notification Service: SMS via Twilio and Dockerize",
+    "phase": "2 - Core Services",
+    "skills": [
+      "Node.js",
+      "Twilio",
+      "Docker"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Notification Service: email via SendGrid"
+    ],
+    "priority": "Low",
+    "start": "2026-12-09",
+    "deadline": "2026-12-09",
+    "owner": "Me"
+  },
+  {
+    "task": "Setup API Gateway (Traefik or NGINX) with routing",
+    "phase": "3 - Integration",
+    "skills": [
+      "API Gateway",
+      "Docker"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Payment Service: tests and Dockerize",
+      "Notification Service: SMS via Twilio and Dockerize"
+    ],
+    "priority": "High",
+    "start": "2026-12-10",
+    "deadline": "2026-12-14",
+    "owner": "Me"
+  },
+  {
+    "task": "Inter-service communication (REST calls timeouts retries)",
+    "phase": "3 - Integration",
+    "skills": [
+      "Node.js",
+      "REST"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Setup API Gateway (Traefik or NGINX) with routing"
+    ],
+    "priority": "High",
+    "start": "2026-12-15",
+    "deadline": "2026-12-17",
+    "owner": "Me"
+  },
+  {
+    "task": "Async events with RabbitMQ (order to payment to notification)",
+    "phase": "3 - Integration",
+    "skills": [
+      "Message Queue",
+      "Node.js"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Inter-service communication (REST calls timeouts retries)"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-18",
+    "deadline": "2026-12-22",
+    "owner": "Me"
+  },
+  {
+    "task": "End-to-end test of full purchase flow (MVP milestone)",
+    "phase": "3 - Integration",
+    "skills": [
+      "Testing"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Async events with RabbitMQ (order to payment to notification)"
+    ],
+    "priority": "High",
+    "start": "2026-12-23",
+    "deadline": "2026-12-24",
+    "owner": "Me"
+  },
+  {
+    "task": "Service Discovery with Consul",
+    "phase": "4 - Service Discovery",
+    "skills": [
+      "Consul",
+      "Docker"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "End-to-end test of full purchase flow (MVP milestone)"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-25",
+    "deadline": "2026-12-29",
+    "owner": "Me"
+  },
+  {
+    "task": "Add health check endpoints to all services",
+    "phase": "5 - Observability",
+    "skills": [
+      "Node.js"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Service Discovery with Consul"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-30",
+    "deadline": "2026-12-30",
+    "owner": "Me"
+  },
+  {
+    "task": "Setup centralized logging (ELK stack)",
+    "phase": "5 - Observability",
+    "skills": [
+      "ELK",
+      "Docker"
+    ],
+    "days": 4,
+    "dependsOn": [
+      "Add health check endpoints to all services"
+    ],
+    "priority": "Medium",
+    "start": "2026-12-31",
+    "deadline": "2027-01-05",
+    "owner": "Me"
+  },
+  {
+    "task": "Setup monitoring (Prometheus and Grafana)",
+    "phase": "5 - Observability",
+    "skills": [
+      "Prometheus",
+      "Grafana"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Add health check endpoints to all services"
+    ],
+    "priority": "Medium",
+    "start": "2027-01-06",
+    "deadline": "2027-01-08",
+    "owner": "Me"
+  },
+  {
+    "task": "CI: GitHub Actions build and test per service",
+    "phase": "6 - CI/CD",
+    "skills": [
+      "GitHub Actions"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "End-to-end test of full purchase flow (MVP milestone)"
+    ],
+    "priority": "Medium",
+    "start": "2027-01-11",
+    "deadline": "2027-01-13",
+    "owner": "Me"
+  },
+  {
+    "task": "CI: build and push Docker images to registry",
+    "phase": "6 - CI/CD",
+    "skills": [
+      "GitHub Actions",
+      "Docker"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "CI: GitHub Actions build and test per service"
+    ],
+    "priority": "Medium",
+    "start": "2027-01-14",
+    "deadline": "2027-01-15",
+    "owner": "Me"
+  },
+  {
+    "task": "Production deployment (Docker Swarm or Kubernetes)",
+    "phase": "7 - Deployment",
+    "skills": [
+      "Kubernetes",
+      "Docker Swarm"
+    ],
+    "days": 5,
+    "dependsOn": [
+      "CI: build and push Docker images to registry",
+      "Setup monitoring (Prometheus and Grafana)"
+    ],
+    "priority": "High",
+    "start": "2027-01-18",
+    "deadline": "2027-01-22",
+    "owner": "Me"
+  },
+  {
+    "task": "CD: automated deploy pipeline",
+    "phase": "6 - CI/CD",
+    "skills": [
+      "GitHub Actions",
+      "Kubernetes"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Production deployment (Docker Swarm or Kubernetes)"
+    ],
+    "priority": "Medium",
+    "start": "2027-01-25",
+    "deadline": "2027-01-26",
+    "owner": "Me"
+  },
+  {
+    "task": "Configure load balancing and auto-scaling",
+    "phase": "7 - Deployment",
+    "skills": [
+      "Kubernetes"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Production deployment (Docker Swarm or Kubernetes)"
+    ],
+    "priority": "Medium",
+    "start": "2027-01-27",
+    "deadline": "2027-01-29",
+    "owner": "Me"
+  },
+  {
+    "task": "Load testing (k6)",
+    "phase": "7 - Deployment",
+    "skills": [
+      "k6",
+      "Testing"
+    ],
+    "days": 2,
+    "dependsOn": [
+      "Configure load balancing and auto-scaling"
+    ],
+    "priority": "Low",
+    "start": "2027-02-01",
+    "deadline": "2027-02-02",
+    "owner": "Me"
+  },
+  {
+    "task": "Write README architecture docs and Swagger API docs",
+    "phase": "8 - Docs and Wrap-up",
+    "skills": [
+      "Technical Writing"
+    ],
+    "days": 3,
+    "dependsOn": [
+      "Load testing (k6)"
+    ],
+    "priority": "Medium",
+    "start": "2027-02-03",
+    "deadline": "2027-02-05",
+    "owner": "Me"
+  },
+  {
+    "task": "Final review and demo",
+    "phase": "8 - Docs and Wrap-up",
+    "skills": [
+      "Review"
+    ],
+    "days": 1,
+    "dependsOn": [
+      "Write README architecture docs and Swagger API docs"
+    ],
+    "priority": "Medium",
+    "start": "2027-02-08",
+    "deadline": "2027-02-08",
+    "owner": "Me"
+  }
+]
